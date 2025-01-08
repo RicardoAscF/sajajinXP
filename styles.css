@@ -29,7 +29,7 @@ main{
 
 .section {
     width: 100%;
-    max-width: 1200px;
+  
     padding: 20px;
     box-sizing: border-box;
     margin: 10px;
@@ -232,7 +232,7 @@ h2 {
 
 .sections{
     background-image: url(Vegeta.jpeg);
-    
+    background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
    
@@ -241,7 +241,9 @@ h2 {
 
 
 main{
-    display: flex;
+    
+    display: grid;  /* Definir el contenedor como un grid */
+    grid-template-columns: 4fr 1fr;  
 }
 
 
