@@ -1,0 +1,150 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saiyan XP</title>
+        <!-- Importando el CSS de Materialize -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+       
+
+
+
+
+
+        <main>
+            <div class="section card-panel">
+                <h2>Saiyan XP Tracker</h2>
+                <div id="levelDisplay" class="level">Nivel: Nivel Base</div>
+                <div id="totalXPDisplay" class="total-xp">XP Total: 0</div>
+
+                <br>
+                <div id="nextLevelDisplay" class="next-level">Siguiente Nivel: - XP</div> <!-- Nueva sección para el siguiente nivel -->
+                <div id="nextLevelDisplayRemaining" class="next-level">Falta Para Siguiente Nivel: - XP</div> <!-- Nueva sección para el siguiente nivel -->
+                
+                <!-- Barra de progreso -->
+                <div class="progress">
+                    <div id="xpProgressBar" class="determinate" style="width: 0%"></div>
+                    <span id="xpPercentage" style="color: white;">0%</span> <!-- Porcentaje de XP -->
+                </div>
+        
+                
+                <!-- Nuevo campo para ingresar el nombre de la tarea -->
+                <div class="input-field">
+                    <input type="text" id="taskNameInput" placeholder="Nombre de la tarea">
+                    <label class="labels" for="taskNameInput">Nombre de la Tarea</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="number" id="xpInput" placeholder="Cantidad de XP">
+                    <label class="labels" for="xpInput">Cantidad de XP</label>
+                </div>
+
+                <button class="btn green darken-2" onclick="addXPManual()">Agregar Tarea</button>
+        
+               
+               
+            </div>
+
+
+
+            <section class="sections">
+                <h1 class="nombre-seccion" id="sj">Super Sajajin 3</h1>
+             
+            </section>
+
+           
+
+        </main>
+
+
+
+
+
+        <section class="btn-frecuentes">
+            <h1 class="nombre-seccion">Tareas Negativas</h1>
+            <div class="task-group">
+             
+                <button class="btn red darken-4" onclick="resetWall('wall1')">Resetear Sección</button>
+                <button class="btn red darken-2" onclick="resetSection('btn-tasks')">Resetear Sección de Tareas</button>
+                <button class="btn red darken-3" onclick="resetWallButtons('wall1')">Resetear botones de Wall1</button>
+
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'No Duoelinguo')">No Duolinguo -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'No Ejercicio')">No Ejercicio -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'No Lumonisity')">No Lumonisity -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'No Subir Video')">No Subir Video -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'Masturbarme')">Masturbarme -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-10, 'wall1', 'Pensamiento XXX')">Pensamiento XXX -10 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-10, 'wall1', 'Pensar en Fany')">Pensar en Fany -10 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-10, 'wall1', 'Tocarme ahi')">Tocarme Ahi -10 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'Ver Facebook')">Ver Facebook -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'Ver Instagram')">Ver Instagram -100 XP</button>
+                <button class="btn red darken-2" onclick="addXP(-100, 'wall1', 'Ver Facebook')">Ver Tik Tok -100 XP</button>
+                
+
+               
+            
+                <!-- Botones de tareas cotidianas -->
+
+        
+           </div>
+        
+            <!-- Botones para tareas recurrentes -->
+            <h1 class="nombre-seccion">Tareas Recurrentes</h1>
+            <div class="task-group">
+               
+
+                <button class="btn green darken-2" onclick="addXP(30, 'wall1', 'Audio Libro')">Audio libro 30 min (30 XP)</button>
+                <button class="btn green darken-2" onclick="addXP(5, 'wall1', 'Banarme')">Banarme (5 XP)</button>
+                <button class="btn green darken-2" onclick="addXP(5, 'wall1', 'Beber Agua')">Beber agua (5 XP)</button>  
+                <button class="btn green darken-2" onclick="addXP(30, 'wall1', 'Duolinguo')">DuoLinguo 30 min (30 XP)</button>
+                <button class="btn green darken-2" onclick="addXP(60, 'wall1', 'Editar y Subir Video')">Editar y Subir Video (60 XP)</button>  
+                <button class="btn green darken-2" onclick="addXP(5, 'wall1', 'Lavar Dientes')">Lavar dientes (5 XP)</button>
+                <button class="btn green darken-2" onclick="addXP(30, 'wall1', 'Lumonisity')">Lumonisity (30 XP)</button>  
+                <button class="btn green darken-2" onclick="addXP(5, 'wall1', 'Hacer la cama')">Tender la cama (5 XP)</button>
+                
+           
+               
+                
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="btn-tasks" >
+            <h1 class="nombre-seccion" >Tareas Pendientes</h1>
+            <div class="task-group" id="btn-tasks"></div> <!-- Aquí irán las tareas pendientes -->
+        </section>
+
+
+
+
+        <section class="btn-finalizadas">
+            <h1 class="nombre-seccion">Tareas Finalizadas</h1>
+            <h2>Por semana</h2>
+            <p></p>
+            <div class="task-group" id="wall1"></div> <!-- Aquí irán las tareas finalizadas -->
+            
+
+            <div class="pagination-container">
+                <button id="prev-week" class="pagination-btn">Semana Anterior</button>
+                <span id="week-number">Semana 1</span>
+                <button id="next-week" class="pagination-btn">Semana Siguiente</button>
+            </div>
+        </section>
+
+
+        <!-- Importando el JS de Materialize -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+    </html>

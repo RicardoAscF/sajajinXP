@@ -1,0 +1,257 @@
+/* Fuentes Personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Tektur&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Cambia a la fuente que prefieras */
+   
+    margin: 20px;
+    background-color: #e0f7fa; /* Un color de fondo suave */
+    
+
+}
+
+.btn-frecuentes{
+  flex: 1;
+}
+
+main{
+    flex: 2;
+}
+
+.btn-tasks{
+    flex: 1;
+    
+}
+
+.btn-tasks, .btn-finalizadas {
+    margin-bottom: 30px;
+}
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    font-family: 'Madimi One', sans-serif; /* Título con fuente personalizada */
+    color: #2c3e50; /* Color del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+.level, .total-xp, .next-level {
+    font-family: 'Tektur', sans-serif; /* Cambia a la fuente deseada */
+    font-weight: bold;
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: #34495e; /* Color del texto */
+}
+.wall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.block {
+   
+    width: 48%;
+    min-width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: 'Tektur', sans-serif;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+
+
+.btn-tasks div{
+    cursor: pointer;
+}
+
+.block.green strong{
+    font-size: 1.05rem;
+}
+
+.block.green small{
+    font-size: 0.85rem;
+}
+
+
+
+.green {
+    background-color: #2E7D32 !important;
+    color: white; /* Cambié el color del texto a blanco */
+}
+.red {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn {
+    font-family: 'Tektur', sans-serif; /* Botones con fuente personalizada */
+}
+/* Estilos para la barra de progreso */
+.progress {
+    position: relative;
+    height: 30px; /* Altura de la barra de progreso */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde el contenido que sobresale */
+}
+.determinate {
+    background-color: #2ecc71; /* Color de la barra de progreso */
+}
+#xpPercentage {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white; /* Color del texto del porcentaje */
+    font-weight: bold;
+    line-height: 30px; /* Centrar verticalmente el texto */
+}
+/* Cambiar el color de los botones verdes a blanco */
+.btn.green, .btn.green.darken-2, .btn.green.darken-4 {
+    color: white; /* Asegura que todos los botones verdes tengan texto blanco */
+}
+.block small {
+    display: block;
+    font-size: 0.8rem; /* Reducir tamaño de la fecha */
+    margin-top: 5px;
+    color: #f1f8e9; /* Color suave para la fecha */
+}
+
+
+.nombre-seccion{
+    font-family: 'Tektur', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.task-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f1f8e9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-group h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las secciones */
+.btn-frecuentes, .btn-recurrentes {
+    margin-bottom: 30px;
+}
+
+
+.task-group h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.wall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Contenedor para botones dentro de Tareas Frecuentes */
+.btn-frecuentes .task-group {
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor para botones dentro de Tareas Recurrentes */
+.btn-recurrentes .task-group {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-group {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.labels{
+    font-size: 1.5rem!important;
+    font-weight: bolder;
+    color: black;
+}
+
+.input-field{
+    margin-top: 1.5rem;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pagination-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.sections{
+    background-image: url(Vegeta.jpeg);
+    
+    background-position: top;
+    background-repeat: no-repeat;
+   
+
+}
+
+
+main{
+    display: flex;
+}
+
+
+#sj{
+    font-weight: bolder;
+    
+    margin-top: 0;
+}
+
+.sections #sj{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+}
